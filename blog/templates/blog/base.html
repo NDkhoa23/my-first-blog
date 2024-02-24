@@ -13,7 +13,9 @@
                 <a href="{% url 'post_new' %}" class="top-menu">
                     {% include './icons/bootstrap-icons-1.1.0/file-earmark-plus.svg' %}
                 </a>
-                <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+                <a href="{% url 'post_draft_list' %}" class="top-menu">
+                    {% include './icons/bootstrap-icons-1.1.0/pencil-square.svg' %}
+                </a>
                 <h1><a href="/">Django Girls Blog</a></h1>
           </div>
         </header>
