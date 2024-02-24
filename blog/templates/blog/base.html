@@ -10,12 +10,19 @@
     <body>
         <header class="page-header">
           <div class="container">
+            {% if user.is_authenticated %} 
+                <p class="top-menu">Hello {{ user.username }} <small>(<a href="{% url 'logout' %}">Log out</a>)</small></p>
                 <a href="{% url 'post_new' %}" class="top-menu">
                     {% include './icons/bootstrap-icons-1.1.0/file-earmark-plus.svg' %}
                 </a>
                 <a href="{% url 'post_draft_list' %}" class="top-menu">
                     {% include './icons/bootstrap-icons-1.1.0/pencil-square.svg' %}
                 </a>
+               
+            {% else %}
+                <a href="{% url 'login'%} " class="top-menu">
+                    {% include './icons/bootstrap-icons-1.1.0/lock.svg' %}
+            {% endif %}
                 <h1><a href="/">Django Girls Blog</a></h1>
           </div>
         </header>

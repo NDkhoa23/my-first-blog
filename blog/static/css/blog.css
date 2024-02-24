@@ -29,7 +29,9 @@ h4 {
 .save {
     float: right;
 }
-
+.login {
+    float: left;
+}
 .post-form textarea,
 .post-form input {
     width: 100%;
